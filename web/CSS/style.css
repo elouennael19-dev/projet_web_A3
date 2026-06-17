@@ -14,27 +14,24 @@ body {
 
 .header {
   background-color: white;
-  padding: 25px 120px; 
+  padding: 25px 8%;
   border-bottom: 1px solid #ddd;
 }
 
-.IRVE{
-  width: 400px;
-  height: auto;
-  margin-right: 550px;
+.logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 35px;
 }
 
-.ISEN{
-  width: 300px;
+.IRVE,
+.ISEN {
+  max-width: 220px;
+  width: 25%;
   height: auto;
-  position: relative;
-  top: -50px;
-}
-
-.header h1 {
-  color: #60708a;
-  font-style: italic;
-  margin-bottom: 25px;
+  object-fit: contain;
 }
 
 /* NAVIGATION */
@@ -44,6 +41,7 @@ body {
   gap: 12px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .navbar a {
@@ -70,10 +68,12 @@ body {
 
 .main {
   min-height: 70vh;
-  padding: 70px 120px;
+  padding: 70px 8%;
 }
 
 .home-container {
+  max-width: 1400px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -82,16 +82,22 @@ body {
 /* CARTES */
 
 .text-card,
-.image-card {
+.image-card,
+.card {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 40px;
+}
+
+.text-card,
+.image-card {
   min-height: 330px;
 }
 
+.text-card h1,
 .text-card h2 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 30px;
 }
 
@@ -109,78 +115,27 @@ body {
 }
 
 .image-placeholder {
-  color: #60708a;
-  font-size: 20px;
-  text-align: center;
-  padding: 50px;
-  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.borne{
-  width: 300px;
+
+.borne {
+  max-width: 80%;
+  max-height: 300px;
   height: auto;
-  margin-right: 50px;
+  object-fit: contain;
 }
 
-/* FOOTER */
-
-.footer {
-  background-color: white;
-  text-align: center;
-  padding: 25px;
-  border-top: 1px solid #ddd;
-}
-.footer h5{
-  color: blue;
-  font-size: small;
-}
-
-.footer h4 {
-  color: #333;
-  font-size: 20px;
-  margin: 8px 0;
-}
-
-/* RESPONSIVE */
-
-@media screen and (max-width: 900px) {
-  .header,
-  .main {
-      padding-left: 30px;
-      padding-right: 30px;
-  }
-
-  .home-container {
-      grid-template-columns: 1fr;
-  }
-
-  .navbar {
-      flex-wrap: wrap;
-  }
-}
-
-.page-title {
-  margin-bottom: 40px;
-}
-
-.page-title h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.page-title p {
-  color: #60708a;
-  font-size: 18px;
-}
+/* PAGE 1 */
 
 .card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 35px;
   margin-bottom: 45px;
 }
 
 .card h2 {
+  font-size: 30px;
   margin-bottom: 10px;
 }
 
@@ -196,29 +151,6 @@ body {
   border: none;
   border-radius: 8px;
   background-color: #111827;
-}
-
-.prediction-buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-bottom: 45px;
-}
-
-.prediction-buttons a {
-  text-align: center;
-  text-decoration: none;
-  color: #0788d1;
-  border: 2px solid #0788d1;
-  padding: 18px;
-  border-radius: 6px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.prediction-buttons a:hover {
-  background-color: #0788d1;
-  color: white;
 }
 
 .station-table {
@@ -238,6 +170,79 @@ body {
   color: #60708a;
   font-weight: bold;
 }
+
+.prediction-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 45px;
+}
+
+.prediction-buttons a {
+  text-align: center;
+  text-decoration: none;
+  color: #0788d1;
+  border: 2px solid #0788d1;
+  padding: 18px;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+}
+
+.prediction-buttons a:hover {
+  background-color: #0788d1;
+  color: white;
+}
+
+/* PAGE 2 */
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.subtitle {
+  color: #60708a;
+  font-size: 18px;
+}
+
+.select-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 30px;
+  max-width: 500px;
+}
+
+.select-box label {
+  display: block;
+  color: #60708a;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+  background: white;
+}
+
+.info-box {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 12px;
+  background: white;
+  border: 1px dashed #d1d5db;
+  font-size: 18px;
+  color: #60708a;
+}
+
+/* FORMULAIRES PREDICTION */
 
 .form-grid {
   display: grid;
@@ -285,11 +290,6 @@ body {
   margin-bottom: 25px;
 }
 
-.result-box h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
 .main-button {
   background-color: #0788d1;
   color: white;
@@ -301,55 +301,88 @@ body {
   cursor: pointer;
 }
 
-.main-button:hover {
-  background-color: #056da8;
+/* FOOTER */
+
+.footer {
+  background-color: white;
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #ddd;
 }
 
+.footer h5 {
+  color: blue;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.footer h4 {
+  color: #333;
+  font-size: 20px;
+}
+
+/* RESPONSIVE */
+
 @media screen and (max-width: 900px) {
-  .prediction-buttons,
-  .form-grid {
-      grid-template-columns: 1fr;
+  .header,
+  .main {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
-  .station-table {
-      font-size: 14px;
+  .logos {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .IRVE,
+  .ISEN {
+    width: 160px;
+    max-width: 45%;
+  }
+
+  .home-container,
+  .prediction-buttons,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar a {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .text-card,
+  .image-card,
+  .card {
+    padding: 25px;
+  }
+
+  .text-card p {
+    font-size: 17px;
   }
 
   .map-frame {
-      height: 380px;
+    height: 380px;
+  }
+
+  .station-table {
+    font-size: 14px;
   }
 }
 
-/* Ligne de formulaire */
-.form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 18px;
-}
+@media screen and (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+  }
 
-.form-row label {
-  font-size: 14px;
-  font-weight: 500;
-}
+  .navbar a {
+    width: 100%;
+    text-align: center;
+  }
 
-/* Select département */
-select {
-  width: 260px;
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  font-size: 14px;
-  background: #ffffff;
-}
-
-/* Bloc message d’info */
-.info-box {
-  margin-top: 12px;
-  padding: 16px 18px;
-  border-radius: 10px;
-  background: #f9fafb;
-  border: 1px dashed #d1d5db;
-  font-size: 14px;
-  color: #4b5563;
+  .IRVE,
+  .ISEN {
+    width: 140px;
+  }
 }
